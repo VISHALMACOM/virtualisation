@@ -1,0 +1,38 @@
+<!-- holidays.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Holidays</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <p><a href="/management/home/">home</a></p>
+    <div class="container mt-5">
+        <h1>List of Holidays</h1>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Holiday ID</th>
+                    <th>Date</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for holiday in holidays %}
+                <tr>
+                    <td>{{ holiday.holiday_id }}</td>
+                    <td>{{ holiday.holiday_date }}</td>
+                    <td>{{ holiday.description }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
