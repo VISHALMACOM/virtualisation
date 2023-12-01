@@ -10,6 +10,8 @@ services:
 
   web:
     build: .
+    command: python ./Student/manage.py makemigrations
+    command: python ./Student/manage.py migrate
     command: python ./Student/manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/Student
