@@ -1,0 +1,35 @@
+<!-- create_holiday.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Holiday</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Create a New Holiday</h1>
+        <form method="post" action="{% url 'create_holiday' %}">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="holiday_id">Holiday ID:</label>
+                <input type="number" class="form-control" id="holiday_id" name="holiday_id">
+            </div>
+            <div class="form-group">
+                <label for="holiday_date">Date:</label>
+                <input type="date" class="form-control" id="holiday_date" name="holiday_date">
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <input type="text" class="form-control" id="description" name="description">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
