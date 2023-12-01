@@ -17,4 +17,6 @@ RUN pip install psycopg2-binary
 EXPOSE 8000
 
 # Command to run the Django development server
+CMD ["python", "./Student/manage.py", "makemigrations"]
+CMD ["python", "./Student/manage.py", "migrate"]
 CMD ["python", "./Student/manage.py", "runserver", "0.0.0.0:8000"]
