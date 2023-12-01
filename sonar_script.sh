@@ -15,5 +15,3 @@ else
     pkill "$pattern"
     echo "Processes killed."
 fi
-
-nohup ./sonarqube-9.9.0.65466/bin/linux-x86-64/sonar.sh console  > /dev/null 2>&1 &
