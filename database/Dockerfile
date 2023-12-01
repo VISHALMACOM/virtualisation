@@ -20,5 +20,4 @@ EXPOSE 8000
 CMD ["python", "./Student/manage.py", "makemigrations"]
 CMD ["python", "./Student/manage.py", "sqlmigrate", "./Student/management", "0001"]
 CMD ["python", "./Student/manage.py", "migrate"]
-CMD ["python", "manage.py", "migrate"]
 CMD ["python", "./Student/manage.py", "runserver", "0.0.0.0:8000"]
