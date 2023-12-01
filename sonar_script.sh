@@ -16,6 +16,4 @@ else
     echo "Processes killed."
 fi
 
-
-cmd="./sonarqube-9.9.0.65466/bin/linux-x86-64/sonar.sh console"
-nohup $cmd > /dev/null 2>&1 &
+nohup ./sonarqube-9.9.0.65466/bin/linux-x86-64/sonar.sh console  > /dev/null 2>&1 &
