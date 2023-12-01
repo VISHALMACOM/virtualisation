@@ -1,8 +1,12 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.template import loader
+#from django.db import psycopg2
 from .models import Teacher, Course, Class, Student, Attendance, TimeTable, Room, TimeTableEntry, Holiday, Users
 from django.contrib.auth import login, logout, authenticate
+
+#conn = psycopg2.connect("dbname='postgres' user='postgres' host='postgres' password='postgres'")    
+
 
 # Debugging Purpose
 import inspect
