@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.template import loader
-#from django.db import psycopg2
+#from django.db.backends.sql import sql
 from .models import Teacher, Course, Class, Student, Attendance, TimeTable, Room, TimeTableEntry, Holiday, Users
 from django.contrib.auth import login, logout, authenticate
 
