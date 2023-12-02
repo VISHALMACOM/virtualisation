@@ -1,24 +1,24 @@
-version: '3'
+version: '3.8'
 
 services:
   db:
-    build:
-      context: .
-      dockerfile: Dockerfile-db
+    image: mysql:8.0
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - mysql-data:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: notesdb
+      MYSQL_USER: notes
+      MYSQL_PASSWORD: notes
+      MYSQL_ROOT_PASSWORD: root
+    restart: always
 
   web:
-    build: .
-    command: python ./Student/manage.py makemigrations
-    command: python ./Student/manage.py migrate
-    command: python ./Student/manage.py runserver 0.0.0.0:8000
-    volumes:
-      - .:/Student
-    ports:
-      - "8000:8000"
     depends_on:
       - db
+    build: .
+    ports:
+      - "8000:8000"
+    restart: always
 
 volumes:
-  postgres_data:
+  mysql-data:
