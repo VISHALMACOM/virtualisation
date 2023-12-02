@@ -89,10 +89,10 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'python',  
-        'USER': 'root',      
-        'PASSWORD': 'macom123',  
-        'HOST': 'localhost',  
+        'NAME': 'notesdb',  
+        'USER': 'notes',      
+        'PASSWORD': 'notes',  
+        'HOST': 'db',  
         'PORT': '3306',
     }
 }
