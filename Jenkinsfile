@@ -30,7 +30,7 @@ pipeline {
             steps {
                 script {
                     sh 'ssh ubuntu@44.221.36.95 "mkdir -p /home/ubuntu/database"'
-                    sh 'scp -r ./database/* ubuntu@44.221.36.95:/home/ubuntu/database/.'
+                    sh 'scp -r ./* ubuntu@44.221.36.95:/home/ubuntu/database/.'
                     sh 'ssh ubuntu@44.221.36.95 "sleep 20; echo $?"'
                     sh 'ssh ubuntu@44.221.36.95 "docker-compose down 2>/dev/null; echo $?"'
                     sh 'ssh ubuntu@44.221.36.95 "docker system prune -af>/dev/null; echo $?"'
