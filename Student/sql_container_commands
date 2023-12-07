@@ -1,0 +1,20 @@
+docker exec  -it database-db-1 /bin/bash
+
+
+mysql -u notes -p -h db
+notes
+
+use notesdb
+
+
+describe management_room;
+
+mysql> select  * from management_room;
++---------+-----------+---------------+
+| room_id | room_name | room_building |
++---------+-----------+---------------+
+|     101 | J         | 212           |
++---------+-----------+---------------+
+1 row in set (0.00 sec)
+
+mysql> 
