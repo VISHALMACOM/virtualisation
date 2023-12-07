@@ -41,7 +41,3 @@ pipeline {
         }
     }
 }
-
-Transfers sonar_script.sh to the SonarQube EC2 instance and executes it.
-Starts SonarQube on the SonarQube EC2 instance.
-Prepares the Docker environment on the Docker EC2 instance by creating directories, transferring files, performing cleanup, setting permissions, and starting Docker services using docker-compose.
